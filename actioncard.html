@@ -1,0 +1,496 @@
+```html name=actioncard.html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>災害時アクションカード - 南山田小学校避難所</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.4;
+        }
+        .card-section {
+            page-break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+        .action-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .action-table th, .action-table td {
+            border: 2px solid #333;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .action-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        .priority-high {
+            background-color: #fee2e2;
+        }
+        .priority-medium {
+            background-color: #fef3c7;
+        }
+        .priority-low {
+            background-color: #ecfdf5;
+        }
+        .flow-arrow {
+            font-size: 1.2em;
+            color: #dc2626;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- 表紙 -->
+    <div class="card-section bg-blue-600 text-white p-8 text-center">
+        <div class="mb-6">
+            <i class="fas fa-shield-alt text-6xl mb-4"></i>
+            <h1 class="text-4xl font-bold mb-2">災害時アクションカード</h1>
+            <h2 class="text-2xl mb-4">南山田小学校避難所</h2>
+        </div>
+        <div class="bg-white text-blue-600 p-4 rounded-lg mb-6">
+            <h3 class="text-xl font-bold mb-2">避難所開設・運営マニュアル</h3>
+            <p class="text-lg">地震・水害等災害発生時対応</p>
+        </div>
+        <div class="text-right">
+            <p class="text-lg">発行：吹田市南山田地区防災委員会</p>
+            <p class="text-sm">令和6年版</p>
+        </div>
+    </div>
+
+    <!-- 初動対応フロー -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-red-600 text-white p-3 flex items-center">
+            <i class="fas fa-exclamation-triangle mr-3"></i>
+            災害発生時　初動対応フロー
+        </h2>
+        <table class="action-table">
+            <tr class="priority-high">
+                <td class="font-bold text-center w-16">1</td>
+                <td class="font-bold">安全確認</td>
+                <td>自分・家族の安全確認 <span class="flow-arrow">→</span> 負傷者あり → 3</td>
+            </tr>
+            <tr class="priority-high">
+                <td class="font-bold text-center">2</td>
+                <td class="font-bold">避難所開設判断</td>
+                <td>災害規模・被害状況確認 <span class="flow-arrow">→</span> 開設必要 → 4</td>
+            </tr>
+            <tr class="priority-high">
+                <td class="font-bold text-center">3</td>
+                <td class="font-bold">応急処置</td>
+                <td>負傷者への応急処置・119番通報</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">4</td>
+                <td class="font-bold">防災委員召集</td>
+                <td>連絡網により委員召集・役割分担決定</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">5</td>
+                <td class="font-bold">施設安全確認</td>
+                <td>校舎・体育館の安全点検実施</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 避難所開設準備 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-orange-600 text-white p-3 flex items-center">
+            <i class="fas fa-building mr-3"></i>
+            避難所開設準備
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="border-2 border-gray-300 p-4">
+                <h3 class="text-lg font-bold mb-3 text-orange-600">
+                    <i class="fas fa-clipboard-check mr-2"></i>開設前チェック項目
+                </h3>
+                <table class="action-table text-sm">
+                    <tr><td>□</td><td>校舎・体育館構造安全確認</td></tr>
+                    <tr><td>□</td><td>電気・水道・ガス使用可否確認</td></tr>
+                    <tr><td>□</td><td>避難スペース確保・区画設定</td></tr>
+                    <tr><td>□</td><td>受付場所設営</td></tr>
+                    <tr><td>□</td><td>トイレ使用可否確認</td></tr>
+                    <tr><td>□</td><td>防災備蓄倉庫の確認</td></tr>
+                </table>
+            </div>
+            <div class="border-2 border-gray-300 p-4">
+                <h3 class="text-lg font-bold mb-3 text-orange-600">
+                    <i class="fas fa-users mr-2"></i>役割分担
+                </h3>
+                <table class="action-table text-sm">
+                    <tr><th>役割</th><th>担当者名</th><th>人数</th></tr>
+                    <tr><td>避難所責任者</td><td></td><td>1名</td></tr>
+                    <tr><td>受付・記録</td><td></td><td>2名</td></tr>
+                    <tr><td>施設管理</td><td></td><td>2名</td></tr>
+                    <tr><td>物資管理</td><td></td><td>2名</td></tr>
+                    <tr><td>情報収集・伝達</td><td></td><td>1名</td></tr>
+                    <tr><td>避難者対応</td><td></td><td>3名</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 受付・記録管理 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-green-600 text-white p-3 flex items-center">
+            <i class="fas fa-clipboard-list mr-3"></i>
+            受付・記録管理　【担当2名】
+        </h2>
+        <table class="action-table">
+            <tr class="priority-high">
+                <td class="font-bold text-center w-16">1</td>
+                <td class="font-bold">受付設営</td>
+                <td>玄関付近に受付テーブル・記録用紙・筆記用具準備</td>
+            </tr>
+            <tr class="priority-high">
+                <td class="font-bold text-center">2</td>
+                <td class="font-bold">避難者受付</td>
+                <td>氏名・住所・人数・連絡先・特別配慮事項を記録</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">3</td>
+                <td class="font-bold">避難場所案内</td>
+                <td>家族構成・健康状態に応じた適切な場所への案内</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">4</td>
+                <td class="font-bold">入退所管理</td>
+                <td>避難者数の把握・市災害対策本部への定期報告</td>
+            </tr>
+        </table>
+        
+        <div class="mt-4 p-4 bg-yellow-100 border-l-4 border-yellow-500">
+            <h4 class="font-bold mb-2"><i class="fas fa-exclamation-circle mr-2"></i>特別配慮者対応</h4>
+            <ul class="list-disc list-inside text-sm">
+                <li>高齢者・障害者・妊婦・乳幼児連れは優先的に静かな場所へ案内</li>
+                <li>ペット同伴者は専用エリアへ案内</li>
+                <li>感染症対策として発熱者は別室対応を検討</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 避難者対応 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-blue-600 text-white p-3 flex items-center">
+            <i class="fas fa-hands-helping mr-3"></i>
+            避難者対応　【担当3名】
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <table class="action-table">
+                    <tr class="priority-high">
+                        <td class="font-bold text-center w-16">1</td>
+                        <td class="font-bold">避難スペース管理</td>
+                        <td>区画設定・清掃・環境整備</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td class="font-bold text-center">2</td>
+                        <td class="font-bold">体調不良者対応</td>
+                        <td>応急処置・医療機関への連絡</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td class="font-bold text-center">3</td>
+                        <td class="font-bold">生活支援</td>
+                        <td>食事・就寝・入浴等の調整</td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td class="font-bold text-center">4</td>
+                        <td class="font-bold">避難者間トラブル対応</td>
+                        <td>苦情・相談への対応</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="border-2 border-gray-300 p-4">
+                <h3 class="text-lg font-bold mb-3 text-blue-600">
+                    <i class="fas fa-map-marked-alt mr-2"></i>避難スペース配置
+                </h3>
+                <table class="action-table text-sm">
+                    <tr><th>場所</th><th>対象者</th></tr>
+                    <tr><td>体育館</td><td>一般避難者</td></tr>
+                    <tr><td>1階教室</td><td>高齢者・障害者</td></tr>
+                    <tr><td>保健室</td><td>体調不良者</td></tr>
+                    <tr><td>図書室</td><td>乳幼児連れ</td></tr>
+                    <tr><td>校庭</td><td>ペット同伴者</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 物資管理 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-purple-600 text-white p-3 flex items-center">
+            <i class="fas fa-box mr-3"></i>
+            物資管理　【担当2名】
+        </h2>
+        <table class="action-table">
+            <tr class="priority-high">
+                <td class="font-bold text-center w-16">1</td>
+                <td class="font-bold">備蓄物資点検</td>
+                <td>防災倉庫内の食料・水・毛布等の数量確認</td>
+            </tr>
+            <tr class="priority-high">
+                <td class="font-bold text-center">2</td>
+                <td class="font-bold">物資配給</td>
+                <td>避難者数に応じた適切な配給・記録管理</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">3</td>
+                <td class="font-bold">不足物資要請</td>
+                <td>市災害対策本部への物資要請・受入準備</td>
+            </tr>
+            <tr class="priority-low">
+                <td class="font-bold text-center">4</td>
+                <td class="font-bold">支援物資管理</td>
+                <td>外部からの支援物資の受入・仕分・配給</td>
+            </tr>
+        </table>
+
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="border-2 border-purple-300 p-3">
+                <h4 class="font-bold text-purple-600 mb-2"><i class="fas fa-utensils mr-2"></i>食料・飲料水</h4>
+                <ul class="text-sm list-disc list-inside">
+                    <li>アルファ米</li>
+                    <li>缶詰・レトルト食品</li>
+                    <li>ペットボトル水</li>
+                    <li>粉ミルク・離乳食</li>
+                </ul>
+            </div>
+            <div class="border-2 border-purple-300 p-3">
+                <h4 class="font-bold text-purple-600 mb-2"><i class="fas fa-bed mr-2"></i>生活用品</h4>
+                <ul class="text-sm list-disc list-inside">
+                    <li>毛布・タオル</li>
+                    <li>マット・枕</li>
+                    <li>着替え・下着</li>
+                    <li>簡易トイレ</li>
+                </ul>
+            </div>
+            <div class="border-2 border-purple-300 p-3">
+                <h4 class="font-bold text-purple-600 mb-2"><i class="fas fa-medkit mr-2"></i>衛生・医療用品</h4>
+                <ul class="text-sm list-disc list-inside">
+                    <li>救急セット</li>
+                    <li>マスク・消毒液</li>
+                    <li>おむつ・生理用品</li>
+                    <li>体温計</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 情報収集・伝達 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-indigo-600 text-white p-3 flex items-center">
+            <i class="fas fa-broadcast-tower mr-3"></i>
+            情報収集・伝達　【担当1名】
+        </h2>
+        <table class="action-table">
+            <tr class="priority-high">
+                <td class="font-bold text-center w-16">1</td>
+                <td class="font-bold">災害情報収集</td>
+                <td>テレビ・ラジオ・インターネットから最新情報収集</td>
+            </tr>
+            <tr class="priority-high">
+                <td class="font-bold text-center">2</td>
+                <td class="font-bold">行政機関との連絡</td>
+                <td>市災害対策本部・消防・警察との連絡調整</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">3</td>
+                <td class="font-bold">避難者への情報提供</td>
+                <td>掲示板・放送による災害状況・支援情報の提供</td>
+            </tr>
+            <tr class="priority-low">
+                <td class="font-bold text-center">4</td>
+                <td class="font-bold">安否情報対応</td>
+                <td>避難者名簿による安否確認・家族等への連絡</td>
+            </tr>
+        </table>
+
+        <div class="mt-4 p-4 bg-indigo-100 border-l-4 border-indigo-500">
+            <h4 class="font-bold mb-2"><i class="fas fa-phone mr-2"></i>重要連絡先</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                    <p><strong>吹田市災害対策本部：</strong> 06-6384-1231</p>
+                    <p><strong>吹田東消防署：</strong> 06-6389-0119</p>
+                    <p><strong>千里山警察署：</strong> 06-6384-1234</p>
+                </div>
+                <div>
+                    <p><strong>関西電力：</strong> 0800-777-3081</p>
+                    <p><strong>大阪ガス：</strong> 0120-0-94817</p>
+                    <p><strong>水道局：</strong> 06-6384-1251</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 施設管理 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-gray-600 text-white p-3 flex items-center">
+            <i class="fas fa-tools mr-3"></i>
+            施設管理　【担当2名】
+        </h2>
+        <table class="action-table">
+            <tr class="priority-high">
+                <td class="font-bold text-center w-16">1</td>
+                <td class="font-bold">安全点検</td>
+                <td>建物・設備の安全性継続確認・危険箇所の立入禁止措置</td>
+            </tr>
+            <tr class="priority-high">
+                <td class="font-bold text-center">2</td>
+                <td class="font-bold">ライフライン確認</td>
+                <td>電気・水道・ガス・通信設備の使用可否確認</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">3</td>
+                <td class="font-bold">清掃・衛生管理</td>
+                <td>トイレ・共用部分の清掃・消毒・ゴミ処理</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">4</td>
+                <td class="font-bold">設備管理</td>
+                <td>照明・暖房・換気設備の運転管理</td>
+            </tr>
+        </table>
+
+        <div class="mt-4 p-4 bg-red-100 border-l-4 border-red-500">
+            <h4 class="font-bold mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>緊急時対応</h4>
+            <ul class="list-disc list-inside text-sm">
+                <li><strong>火災発生時：</strong> 消火器による初期消火・119番通報・避難誘導</li>
+                <li><strong>余震発生時：</strong> 避難者への注意喚起・安全確保</li>
+                <li><strong>設備故障時：</strong> 使用中止・危険箇所の立入禁止・業者連絡</li>
+                <li><strong>不審者侵入時：</strong> 110番通報・避難者の安全確保</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 長期滞在支援 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-teal-600 text-white p-3 flex items-center">
+            <i class="fas fa-calendar-week mr-3"></i>
+            長期滞在支援
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <table class="action-table">
+                    <tr class="priority-medium">
+                        <td class="font-bold text-center w-16">1</td>
+                        <td class="font-bold">自治組織結成</td>
+                        <td>避難者代表選出・運営委員会設置</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td class="font-bold text-center">2</td>
+                        <td class="font-bold">生活ルール策定</td>
+                        <td>起床・消灯時間・共用施設利用ルール</td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td class="font-bold text-center">3</td>
+                        <td class="font-bold">プライバシー確保</td>
+                        <td>間仕切り設置・個人スペース確保</td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td class="font-bold text-center">4</td>
+                        <td class="font-bold">健康管理</td>
+                        <td>巡回健康相談・メンタルケア</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="border-2 border-gray-300 p-4">
+                <h3 class="text-lg font-bold mb-3 text-teal-600">
+                    <i class="fas fa-clock mr-2"></i>生活時間の目安
+                </h3>
+                <table class="action-table text-sm">
+                    <tr><td>6:00</td><td>起床・ラジオ体操</td></tr>
+                    <tr><td>7:00</td><td>朝食・清掃</td></tr>
+                    <tr><td>12:00</td><td>昼食</td></tr>
+                    <tr><td>18:00</td><td>夕食</td></tr>
+                    <tr><td>21:00</td><td>入浴（時間制）</td></tr>
+                    <tr><td>22:00</td><td>消灯</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 閉所手順 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-red-600 text-white p-3 flex items-center">
+            <i class="fas fa-door-open mr-3"></i>
+            避難所閉所手順
+        </h2>
+        <table class="action-table">
+            <tr class="priority-medium">
+                <td class="font-bold text-center w-16">1</td>
+                <td class="font-bold">閉所準備</td>
+                <td>避難者の帰宅支援・転居先確保支援</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">2</td>
+                <td class="font-bold">施設復旧</td>
+                <td>清掃・備品返却・損傷箇所の記録</td>
+            </tr>
+            <tr class="priority-medium">
+                <td class="font-bold text-center">3</td>
+                <td class="font-bold">記録整理</td>
+                <td>運営記録・物資使用記録の整理・保管</td>
+            </tr>
+            <tr class="priority-low">
+                <td class="font-bold text-center">4</td>
+                <td class="font-bold">報告書作成</td>
+                <td>運営状況・課題・改善点の報告書作成</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 連絡先・メモ欄 -->
+    <div class="card-section">
+        <h2 class="text-2xl font-bold mb-4 bg-gray-700 text-white p-3 flex items-center">
+            <i class="fas fa-sticky-note mr-3"></i>
+            連絡先・メモ欄
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="border-2 border-gray-300 p-4">
+                <h3 class="text-lg font-bold mb-3 text-gray-700">
+                    <i class="fas fa-users mr-2"></i>防災委員連絡先
+                </h3>
+                <table class="action-table text-sm">
+                    <tr><th>役職</th><th>氏名</th><th>連絡先</th></tr>
+                    <tr><td>委員長</td><td></td><td></td></tr>
+                    <tr><td>副委員長</td><td></td><td></td></tr>
+                    <tr><td>総務</td><td></td><td></td></tr>
+                    <tr><td>会計</td><td></td><td></td></tr>
+                    <tr><td>広報</td><td></td><td></td></tr>
+                </table>
+            </div>
+            <div class="border-2 border-gray-300 p-4">
+                <h3 class="text-lg font-bold mb-3 text-gray-700">
+                    <i class="fas fa-edit mr-2"></i>メモ・特記事項
+                </h3>
+                <div class="border border-gray-300 h-32 p-2">
+                    <!-- メモ記入欄 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <div class="card-section bg-blue-600 text-white p-4 text-center">
+        <p class="text-sm">
+            <i class="fas fa-shield-alt mr-2"></i>
+            このアクションカードは災害時の迅速な対応を支援するためのものです。<br>
+            定期的な訓練により内容を習熟し、地域防災力の向上に努めましょう。
+        </p>
+        <p class="text-xs mt-2">吹田市南山田地区防災委員会　令和6年版</p>
+    </div>
+</body>
+</html>
+```
+このHTMLを `actioncard.html` というファイル名で保存してください。他のご要望があればお伝えください。
